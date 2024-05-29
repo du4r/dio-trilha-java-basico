@@ -28,6 +28,11 @@ public class Contador {
 
         for (int i = 1; i <= contagem; i++){
             System.out.println("Imprimindo o número " + i);
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
         }
     }
 }
